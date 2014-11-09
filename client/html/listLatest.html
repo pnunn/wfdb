@@ -1,5 +1,16 @@
 <template name="listLatest">
+  <h1>Latest Generation</h1>
   {{#each infolite}}
-    {{dispatchload.duids.BOCORWF1.settlementdate}}:{{dispatchload.duids.BOCORWF1.initialmw}} MW:{{status_at}}<br>
+    <h2>{{status_at}}:    {{dispatchload.duids.BOCORWF1.initialmw}} MW</h2>
+    <h2>Dispatch Cap:  {{dispatchload.duids.BOCORWF1.semidispatchcap}}   Dispatch Load {{dispatchload.duids.BOCORWF1.totalcleared}}  MW </h2>
   {{/each}}
+
+  {{> chart}}
+</template>
+
+
+<template name="chart">
+  <div width="500" height="500">
+    <svg id="chart"></svg>
+  </div>
 </template>

@@ -3,6 +3,6 @@
 //})
 
 Meteor.publish('recentMW', function() {
-  return Infolite.find({}, {sort: {status_at: -1}, limit: 10});
-  //return Infolite.find().sort({status_at: -1}).limit(10);
+  //return Infolite.find({}, {sort: {status_at: -1}, limit: 10});
+  return Infolite.find({}, {sort: {_id: -1}, limit: 1});
 })
